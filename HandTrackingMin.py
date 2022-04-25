@@ -20,7 +20,7 @@ while True:
     success, img = cap.read()
     imgRGB = cv.cvtColor(img, cv.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
-    #print(results.multi_hand_landmarks)
+    print(results.multi_hand_landmarks)
 
     if results.multi_hand_landmarks:
         for handLms in results.multi_hand_landmarks:
